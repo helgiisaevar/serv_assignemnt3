@@ -246,7 +246,7 @@ int sendServerMessageOverSocket (const int targetSocket, const std::string comma
 
 
 void sleep(int milliseconds) {
-  std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+  std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds)); //this_thread
 }
 
 // Send servers number of messages we have in store for them
