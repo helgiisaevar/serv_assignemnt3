@@ -523,7 +523,7 @@ void handleClientCommand(
       std::string ip = command_data[1];
       int port = stoi(command_data[2]);
       
-      if (servers.size() > MAX_SERVERS_COUNT) {
+      if (servers.size() > (unsigned)MAX_SERVERS_COUNT) {
         sendClientMessageOverSocket(clientSocket, "Sorry, we cannot connect to more servers");
         return; 
       }
